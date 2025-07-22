@@ -5,9 +5,11 @@ namespace Exo.WebApi.Contexts
 {
     public class ExoContext : DbContext
     {
-        public DbSet<Projeto> Projetos { get; set; }  // <-- CORREÇÃO
+        public DbSet<Projeto> Projetos { get; set; }
+        
+        public DbSet<Usuario> Usuarios { get; set; } 
 
-        public ExoContext() {}
+        public ExoContext() { }
 
         public ExoContext(DbContextOptions<ExoContext> options) : base(options) {}
 
